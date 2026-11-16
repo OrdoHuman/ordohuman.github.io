@@ -1,9 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
-  <url><loc>https://github.io</loc></url>
-  <url><loc>https://github.iom%C3%B3dulo1.html</loc></url>
-  <url><loc>https://github.iomodulo2.html</loc></url>
-  <url><loc>https://github.iomodulo3.html</loc></url>
-  <url><loc>https://github.ioen.html</loc></url>
-  <url><loc>https://github.ioes.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://ordohuman.github.io/</loc>
+</url>
+<url>
+<loc>https://ordohuman.github.io/m%C3%B3dulo1.html</loc>
+</url>
+<url>
+<loc>https://ordohuman.github.io/modulo2.html</loc>
+</url>
+<url>
+<loc>https://ordohuman.github.io/modulo3.html</loc>
+</url>
+<url>
+<loc>https://ordohuman.github.io/en.html</loc>
+</url>
+<url>
+<loc>https://ordohuman.github.io/es.html</loc>
+</url>
 </urlset>
