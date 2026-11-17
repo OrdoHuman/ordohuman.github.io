@@ -207,3 +207,44 @@
 
     <h2>3. Síntese Prática para o Dia a Dia</h2>
     <ul>
+      <li><strong>Desmistifique o "oráculo":</strong> Lembre-se de que você não está conversando com uma entidade sábia ou consciente, mas operando uma ferramenta matemática que calcula probabilidades de texto a partir de dados humanos.</li>
+      <li><strong>Valorize a realidade física:</strong> Toda tecnologia depende de recursos finitos da terra — areia, metais, água e eletricidade. Não permita que o mundo digital substitua o contato real com a natureza, o trabalho manual e a presença física da família.</li>
+      <li><strong>Mantenha o governo da decisão:</strong> Use a máquina para acelerar tarefas mecânicas, organizar rascunhos e pesquisar referências, mas nunca terceirize a sua consciência, o seu julgamento moral ou a sua responsabilidade final.</li>
+    </ul>
+
+    <div class="box">
+      <strong>Regra de Ouro Histórica:</strong> A máquina pode processar milhões de cálculos por segundo, mas não possui alma nem responderá pelas consequências dos atos. Quem segura o leme é sempre o ser humano.
+    </div>
+
+    <div class="actions">
+      <a href="/" class="btn-link btn-secondary">Voltar ao Início</a>
+      <button class="print-btn" onclick="window.print()">Salvar Módulo 1 (PDF)</button>
+      <a href="/modulo2.html" class="btn-link">Ir para Módulo 2 →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Continuidade desta Obra:</strong> Este manual é de acesso aberto, livre de anúncios e sem intermediários. Se estas páginas trouxeram clareza para a sua mente e para a sua família, sua contribuição espontânea permite que este conhecimento alcance e fortaleça outros lares.</p>
+    <div class="pix-action">
+      <button id="btn-pix" class="pix-btn" onclick="copiarPix()">Contribuir com esta Obra (Pix)</button>
+    </div>
+    <p class="copyright">© 2026 Ordo Humano. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function copiarPix() {
+      const chave = "b41cfda1-a5c6-4d01-82c8-d163d696baaa";
+      navigator.clipboard.writeText(chave).then(() => {
+        const btn = document.getElementById("btn-pix");
+        const textoOriginal = btn.innerText;
+        btn.innerText = "Chave Pix copiada para a área de transferência ✓";
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.innerText = textoOriginal;
+          btn.classList.remove("copied");
+        }, 3500);
+      });
+    }
+  </script>
+</body>
+</html>
