@@ -93,6 +93,9 @@
       cursor: pointer;
       text-decoration: none;
     }
+    button.print-btn:hover {
+      background-color: #333333;
+    }
     a.btn-secondary {
       background-color: #ffffff;
       color: #111111;
@@ -105,6 +108,34 @@
       font-size: 0.9rem;
       color: #555555;
       font-family: Arial, sans-serif;
+    }
+    .pix-action {
+      margin: 16px 0 24px 0;
+    }
+    button.pix-btn {
+      background-color: #ffffff;
+      color: #111111;
+      border: 1px solid #111111;
+      padding: 10px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+    button.pix-btn:hover {
+      background-color: #111111;
+      color: #ffffff;
+    }
+    button.pix-btn.copied {
+      background-color: #2e7d32;
+      color: #ffffff;
+      border-color: #2e7d32;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      color: #777777;
     }
     @media print {
       header, .actions, footer { display: none; }
@@ -171,19 +202,3 @@
     </ul>
 
     <h2>3. Síntese Prática para o Dia a Dia</h2>
-    <p>Quando você ou seu filho conversam com uma Inteligência Artificial hoje, vocês não estão falando com uma entidade superior ou mágica. Vocês estão usando a energia elétrica da sua casa para acionar bilhões de interruptores microscópicos feitos de areia e metal, programados por engenheiros para cruzar textos escritos por outros seres humanos no passado.</p>
-    <p>A máquina tem velocidade de cálculo; <strong>o ser humano tem discernimento, propósito e governo</strong>.</p>
-
-    <div class="actions">
-      <a href="/" class="btn-link btn-secondary">Voltar ao Início</a>
-      <button class="print-btn" onclick="window.print()">Salvar ou Imprimir Módulo 1 (PDF)</button>
-    </div>
-  </main>
-
-  <footer>
-    <p><strong>Ordo Humano</strong> — Manual Gratuito de Governo Humano e Sabedoria Prática.</p>
-    <p>© 2026 Ordo Humano. Todos os direitos reservados.</p>
-  </footer>
-
-</body>
-</html>
