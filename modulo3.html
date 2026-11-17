@@ -17,16 +17,22 @@
     ul { padding-left: 20px; }
     li { margin-bottom: 10px; }
     .actions { margin: 36px 0; text-align: center; }
-    button, a.btn { background: #111; color: #fff; border: none; padding: 12px 20px; font-size: 0.95rem; font-family: Arial, sans-serif; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; margin: 4px; }
+    button.print-btn, a.btn { background: #111; color: #fff; border: none; padding: 12px 20px; font-size: 0.95rem; font-family: Arial, sans-serif; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; margin: 4px; }
+    button.print-btn:hover { background: #333; }
     a.btn-sec { background: #fff; color: #111; border: 1px solid #111; }
     footer { border-top: 1px solid #e0e0e0; margin-top: 48px; padding-top: 24px; font-size: 0.9rem; color: #555; font-family: Arial, sans-serif; }
+    .pix-action { margin: 16px 0 24px 0; }
+    button.pix-btn { background-color: #ffffff; color: #111111; border: 1px solid #111111; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 0.9rem; font-weight: bold; transition: all 0.2s ease; }
+    button.pix-btn:hover { background-color: #111111; color: #ffffff; }
+    button.pix-btn.copied { background-color: #2e7d32; color: #ffffff; border-color: #2e7d32; }
+    .copyright { font-size: 0.85rem; color: #777777; }
     @media print { header, .actions, footer { display: none; } }
   </style>
 </head>
 <body>
   <header>
     <a href="/" class="brand">Ordo Humano</a>
-    <nav><a href="/">Início</a> <a href="/módulo1.html">Módulo 1</a> <a href="/modulo2.html">Módulo 2</a> <a href="/modulo3.html"><strong>Módulo 3</strong></a></nav>
+    <nav><a href="/">Início</a> <a href="/modulo1.html">Módulo 1</a> <a href="/modulo2.html">Módulo 2</a> <a href="/modulo3.html"><strong>Módulo 3</strong></a></nav>
   </header>
   <main>
     <h1>Módulo 3 — Sabedoria Humana, Temperamentos e Ensino aos Filhos</h1>
@@ -58,11 +64,32 @@
 
     <div class="actions">
       <a href="/" class="btn btn-sec">Voltar ao Início</a>
-      <button onclick="window.print()">Salvar Módulo 3 (PDF)</button>
+      <button class="print-btn" onclick="window.print()">Salvar Módulo 3 (PDF)</button>
     </div>
   </main>
+
   <footer>
-    <p>© 2026 Ordo Humano. Todos os direitos reservados.</p>
+    <p><strong>Continuidade desta Obra:</strong> Este manual é de acesso aberto, livre de anúncios e sem intermediários. Se estas páginas trouxeram clareza para a sua mente e para a sua família, sua contribuição espontânea permite que este conhecimento alcance e fortaleça outros lares.</p>
+    <div class="pix-action">
+      <button id="btn-pix" class="pix-btn" onclick="copiarPix()">Contribuir com esta Obra (Pix)</button>
+    </div>
+    <p class="copyright">© 2026 Ordo Humano. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    function copiarPix() {
+      const chave = "b41cfda1-a5c6-4d01-82c8-d163d696baaa";
+      navigator.clipboard.writeText(chave).then(() => {
+        const btn = document.getElementById("btn-pix");
+        const textoOriginal = btn.innerText;
+        btn.innerText = "Chave Pix copiada para a área de transferência ✓";
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.innerText = textoOriginal;
+          btn.classList.remove("copied");
+        }, 3500);
+      });
+    }
+  </script>
 </body>
 </html>
